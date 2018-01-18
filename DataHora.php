@@ -12,17 +12,17 @@ class DataHora {
     }
     #------------------SET----------------#
     function setDataNasc($dataNasc) {
-        $this->dataNasc = $dataNasc;
+    	$this->dataNasc = $dataNasc;
     }
     #-------------------------------------#
     // Metodos
     // Calcular Idade através da data do nascimento
     public function idade() {
     	if ($this->getDataNasc()) {    		
-			$dn = new DateTime($this->dataNasc);
-			$agora = new DateTime();
-			$idade = $agora->diff($dn);
-			echo "<p> Você tem ".$idade->y." anos </p>";
+		$dn = new DateTime($this->dataNasc);
+		$agora = new DateTime();
+		$idade = $agora->diff($dn);
+		echo "<p> Você tem ".$idade->y." anos </p>";
     	} else {
     		echo "<p> Informe sua data de nascimento!</p>";
     	}
